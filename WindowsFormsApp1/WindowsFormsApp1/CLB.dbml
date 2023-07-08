@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLHOATDONG" Class="CLBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-SDLMECNT\SQLEXPRESS;Initial Catalog=QLHOATDONG;User ID=sa" SettingsObjectName="WindowsFormsApp1.Properties.Settings" SettingsPropertyName="QLHOATDONGConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DANGKY" Member="DANGKies">
+    <Type Name="DANGKY">
+      <Column Name="MaSK" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaTV" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="SUKIEN_DANGKY" Member="SUKIEN" ThisKey="MaSK" OtherKey="MaSK" Type="SUKIEN" IsForeignKey="true" />
+      <Association Name="THANHVIEN_DANGKY" Member="THANHVIEN" ThisKey="MaTV" OtherKey="MaTV" Type="THANHVIEN" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HOATDONG" Member="HOATDONGs">
+    <Type Name="HOATDONG">
+      <Column Name="MaHD" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenHD" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="HOATDONG_SUKIEN" Member="SUKIENs" ThisKey="MaHD" OtherKey="MaHD" Type="SUKIEN" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SUKIEN" Member="SUKIENs">
+    <Type Name="SUKIEN">
+      <Column Name="MaSK" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenSK" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaDiem" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgayBD" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MaHD" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Association Name="SUKIEN_DANGKY" Member="DANGKies" ThisKey="MaSK" OtherKey="MaSK" Type="DANGKY" />
+      <Association Name="HOATDONG_SUKIEN" Member="HOATDONG" ThisKey="MaHD" OtherKey="MaHD" Type="HOATDONG" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.THANHVIEN" Member="THANHVIENs">
+    <Type Name="THANHVIEN">
+      <Column Name="MaTV" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenTV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DiaChiTV" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySinhTV" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TenTK" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="MatKhau" Type="System.String" DbType="Char(20)" CanBeNull="true" />
+      <Column Name="TYPE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="THANHVIEN_DANGKY" Member="DANGKies" ThisKey="MaTV" OtherKey="MaTV" Type="DANGKY" />
+    </Type>
+  </Table>
+</Database>

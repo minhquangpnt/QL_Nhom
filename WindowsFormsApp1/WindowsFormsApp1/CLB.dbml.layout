@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="CLB">
+  <DataContextMoniker Name="/CLBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ae0b3911-8ff5-40ce-a7d6-ae497262dff3" absoluteBounds="6.25, 1.25, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/CLBDataContext/DANGKY" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4b1b4282-7ff1-4cac-a4bd-b23f64c0da05" absoluteBounds="6.265, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17405895-3458-4c27-9502-75f3289be669" absoluteBounds="0.75, 1.25, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/CLBDataContext/HOATDONG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7ab00287-01bc-425b-9f90-7a0f2e95bc71" absoluteBounds="0.765, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="47604a73-cd3d-4399-a066-74546e2f9b96" absoluteBounds="3.5, 0.875, 2, 1.7708968098958333">
+      <DataClassMoniker Name="/CLBDataContext/SUKIEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="84e36129-787e-4070-a92f-084f49cd13ae" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="729fa271-f632-4a5c-96da-a754ebac874c" absoluteBounds="3.5, 4.75, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/CLBDataContext/THANHVIEN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="899e9976-ac02-4665-843b-e3761021b5a5" absoluteBounds="3.515, 5.21, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 1.84699625651042); (6.25 : 1.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CLBDataContext/SUKIEN/SUKIEN_DANGKY" />
+      <nodes>
+        <classShapeMoniker Id="47604a73-cd3d-4399-a066-74546e2f9b96" />
+        <classShapeMoniker Id="ae0b3911-8ff5-40ce-a7d6-ae497262dff3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.84699625651042); (3.5 : 1.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CLBDataContext/HOATDONG/HOATDONG_SUKIEN" />
+      <nodes>
+        <classShapeMoniker Id="17405895-3458-4c27-9502-75f3289be669" />
+        <classShapeMoniker Id="47604a73-cd3d-4399-a066-74546e2f9b96" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 5.82774983723958); (7.25 : 5.82774983723958); (7.25 : 2.44399251302083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/CLBDataContext/THANHVIEN/THANHVIEN_DANGKY" />
+      <nodes>
+        <classShapeMoniker Id="729fa271-f632-4a5c-96da-a754ebac874c" />
+        <classShapeMoniker Id="ae0b3911-8ff5-40ce-a7d6-ae497262dff3" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
